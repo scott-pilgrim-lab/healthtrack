@@ -8,10 +8,8 @@
 | **Project title** | HealthTrack |
 | **Phase** | 1: React frontend |
 | **Student** | Maroun Issa |
-| **Student ID** | _[your ID]_ |
-| **Instructor** | _[instructor name]_ |
-| **Semester** | _[semester and year]_ |
-| **Submission date** | _[date]_ |
+| **Student ID** |52430635|
+| **Instructor** |Ihab Hassoun|
 | **GitHub repository** | _[repository URL]_ |
 | **Live site** | _[Vercel URL]_ |
 
