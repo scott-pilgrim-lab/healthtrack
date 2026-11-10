@@ -41,7 +41,7 @@ You need [Node.js](https://nodejs.org/) 20 or newer.
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<your-username>/healthtrack.git
+git clone https://github.com/scott-pilgrim-lab/healthtrack.git
 cd healthtrack
 
 # 2. Install dependencies
@@ -118,20 +118,61 @@ The project includes a `vercel.json` that rewrites every path to `index.html`, s
 
 ## Screenshots
 
-> Replace the placeholders below with real screenshots saved in `docs/screenshots/`.
+Full-page captures at desktop (1280px) and mobile (375px) widths, with the sample data loaded. Click a page name to expand it.
 
-| Page | Desktop (1280px) | Mobile (375px) |
-| --- | --- | --- |
-| Home | `docs/screenshots/home-desktop.png` | `docs/screenshots/home-mobile.png` |
-| About | `docs/screenshots/about-desktop.png` | `docs/screenshots/about-mobile.png` |
-| Features | `docs/screenshots/features-desktop.png` | `docs/screenshots/features-mobile.png` |
-| Contact | `docs/screenshots/contact-desktop.png` | `docs/screenshots/contact-mobile.png` |
-| Dashboard | `docs/screenshots/dashboard-desktop.png` | `docs/screenshots/dashboard-mobile.png` |
-| 404 | `docs/screenshots/404-desktop.png` | `docs/screenshots/404-mobile.png` |
+<details open>
+<summary><strong>Dashboard</strong></summary>
 
-<!-- Example once the image exists:
-![Dashboard on desktop](docs/screenshots/dashboard-desktop.png)
--->
+| Desktop | Mobile |
+| --- | --- |
+| <img src="docs/screenshots/dashboard-desktop.png" alt="Dashboard on desktop" width="560"> | <img src="docs/screenshots/dashboard-mobile.png" alt="Dashboard on mobile" width="220"> |
+
+</details>
+
+<details>
+<summary><strong>Home</strong></summary>
+
+| Desktop | Mobile |
+| --- | --- |
+| <img src="docs/screenshots/home-desktop.png" alt="Home page on desktop" width="560"> | <img src="docs/screenshots/home-mobile.png" alt="Home page on mobile" width="220"> |
+
+</details>
+
+<details>
+<summary><strong>About</strong></summary>
+
+| Desktop | Mobile |
+| --- | --- |
+| <img src="docs/screenshots/about-desktop.png" alt="About page on desktop" width="560"> | <img src="docs/screenshots/about-mobile.png" alt="About page on mobile" width="220"> |
+
+</details>
+
+<details>
+<summary><strong>Features</strong></summary>
+
+| Desktop | Mobile |
+| --- | --- |
+| <img src="docs/screenshots/features-desktop.png" alt="Features page on desktop" width="560"> | <img src="docs/screenshots/features-mobile.png" alt="Features page on mobile" width="220"> |
+
+</details>
+
+<details>
+<summary><strong>Contact</strong></summary>
+
+| Desktop | Mobile |
+| --- | --- |
+| <img src="docs/screenshots/contact-desktop.png" alt="Contact page on desktop" width="560"> | <img src="docs/screenshots/contact-mobile.png" alt="Contact page on mobile" width="220"> |
+
+</details>
+
+<details>
+<summary><strong>404 page</strong></summary>
+
+| Desktop | Mobile |
+| --- | --- |
+| <img src="docs/screenshots/404-desktop.png" alt="404 page on desktop" width="560"> | <img src="docs/screenshots/404-mobile.png" alt="404 page on mobile" width="220"> |
+
+</details>
 
 ## Author
 
