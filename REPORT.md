@@ -180,13 +180,15 @@ All of these are defined once as CSS variables at the top of `theme.css` and reu
 
 ### 5.2 Responsiveness
 
-The layout was checked at 375px, 768px and 1280px.
+The layout was checked at 375px, 768px and 1280px, and tested with phone emulation (touch input, high-density screen) at 320, 360, 375, 390 and 414px wide plus a phone in landscape. No page scrolls sideways at any of these sizes.
 
 | Width | Behaviour |
 | --- | --- |
 | 375px (phone) | Hamburger menu, content in a single column, summary cards two per row, form above the list |
 | 768px (tablet) | Hamburger menu, feature cards in rows of two or three, chart and goals stacked |
 | 1280px (desktop) | Full navbar, four summary cards in a row, chart beside goals, form beside list |
+
+Phone-specific details: buttons and tabs are at least 44px tall so they are easy to tap, form inputs use 16px text so iPhones do not zoom in when one is selected, and the chart drops the "min" unit under each day so the labels fit on one line.
 
 ### 5.3 Accessibility
 
@@ -196,6 +198,47 @@ The layout was checked at 375px, 768px and 1280px.
 - The chart includes a hidden data table for screen readers.
 - Delete buttons have descriptive labels such as "Delete Morning run (Today)".
 - Animations are disabled for users who prefer reduced motion.
+- The mobile menu button tells screen readers whether the menu is open (`aria-expanded`).
+
+### 5.4 Screenshots
+
+All screenshots are taken from the deployed production build with the sample data loaded. Full-page captures of every page at desktop and mobile widths are in the repository under `docs/screenshots/`.
+
+<p align="center"><img src="docs/report-figures/home-desktop.png" alt="Home page on desktop" width="100%"></p>
+
+*Figure 1. Home page on desktop: hero section with the call-to-action to the dashboard and a preview of the daily summary.*
+
+<p align="center"><img src="docs/report-figures/home-phone.png" alt="Home page on a phone" width="30%">&nbsp;&nbsp;<img src="docs/report-figures/menu-phone.png" alt="Mobile menu open" width="30%"></p>
+
+*Figure 2. Home page on a phone (375px) and the hamburger menu opened, with the active page highlighted.*
+
+<p align="center"><img src="docs/report-figures/dashboard-overview-desktop.png" alt="Dashboard overview on desktop" width="100%"></p>
+
+*Figure 3. Dashboard on desktop: today's summary cards, the 7-day progress chart built with plain divs, and the daily goal progress bars.*
+
+<p align="center"><img src="docs/report-figures/dashboard-workouts-desktop.png" alt="Workouts tab on desktop" width="100%"></p>
+
+*Figure 4. The Workouts tab with the seeded calisthenics push / pull / legs + skills split. The add form is on the left; the list, date filter and delete buttons are on the right.*
+
+<p align="center"><img src="docs/report-figures/dashboard-validation-empty-desktop.png" alt="Form validation and empty state" width="100%"></p>
+
+*Figure 5. Inline validation after submitting an empty form, and the empty state shown when the date filter matches no entries.*
+
+<p align="center"><img src="docs/report-figures/dashboard-phone.png" alt="Dashboard on a phone" width="30%">&nbsp;&nbsp;<img src="docs/report-figures/chart-phone.png" alt="7-day chart on a phone" width="30%">&nbsp;&nbsp;<img src="docs/report-figures/log-phone.png" alt="Log on a phone" width="30%"></p>
+
+*Figure 6. The dashboard on a phone: summary cards two per row, the chart and the tabbed log stacked in a single column.*
+
+<p align="center"><img src="docs/report-figures/contact-errors-desktop.png" alt="Contact form with errors" width="100%"></p>
+
+*Figure 7. Contact form with client-side validation: each invalid field shows its own message underneath.*
+
+<p align="center"><img src="docs/report-figures/contact-success-desktop.png" alt="Contact form success state" width="100%"></p>
+
+*Figure 8. Success state shown after a valid message is submitted.*
+
+<p align="center"><img src="docs/report-figures/notfound-desktop.png" alt="404 page" width="100%"></p>
+
+*Figure 9. The 404 page shown for any unknown address.*
 
 ## 6. Key code snippets
 
@@ -384,6 +427,8 @@ Bootstrap 5 reads its colours, fonts and radii from CSS variables. The theme fir
 | `npm run build` | Builds successfully |
 | Browser console on every page | No errors or warnings |
 | Layout at 375px, 768px and 1280px | No horizontal scrolling on any page |
+| Phone emulation from 320px to 414px and landscape | Menu, tabs, forms, add and delete all work by touch |
+| Deployed site on Vercel | Every route loads directly and after a refresh |
 | Add, delete and filter entries | Lists, summary cards and chart update correctly |
 | Data after page refresh | Entries are still there |
 | Contact form | Shows errors for empty and invalid fields, then the success state |
@@ -400,7 +445,15 @@ Bootstrap 5 reads its colours, fonts and radii from CSS variables. The theme fir
 
 Phase 1 delivers a complete, responsive React frontend for HealthTrack with six routes, a dynamic dashboard and its own visual identity. Keeping all data access in one service file and all entries in one piece of state made the dashboard simple to reason about and leaves a clear path for adding the backend in Phase 2.
 
-## 10. References
+## 10. Group contribution statement
+
+This project was completed individually. The group has one member.
+
+| Member | Student ID | Contribution |
+| --- | --- | --- |
+| Maroun Issa | 52430635 | 100%: planning, visual design, all pages and components, data layer, responsive layout and testing, documentation and report, GitHub repository and Vercel deployment |
+
+## 11. References
 
 - React documentation: https://react.dev/
 - React Router documentation: https://reactrouter.com/
