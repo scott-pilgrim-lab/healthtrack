@@ -8,6 +8,12 @@ import { formatDate } from '../utils/date'
 
 const PAGE_SIZE = 8
 
+// 'Today' -> 'today' inside a sentence, but keep 'Wed 1 Jan' capitalised.
+const dateInSentence = (key) => {
+  const label = formatDate(key)
+  return label === 'Today' || label === 'Yesterday' ? label.toLowerCase() : label
+}
+
 /**
  * Content of one dashboard tab: add form on the left, filter + list on the
  * right (stacked on small screens). The filter state lives here because it
@@ -41,7 +47,7 @@ export default function TrackerPanel({ config, entries, onAdd, onDelete }) {
           <DateFilter id={`${config.key}-filter`} value={filterDate} onChange={changeFilter} />
           <p className="small text-muted mb-2" aria-live="polite">
             Showing {visible.length} of {filtered.length}{' '}
-            {filterDate ? `for ${formatDate(filterDate).toLowerCase()}` : 'in total'}
+            {filterDate ? `for ${dateInSentence(filterDate)}` : 'in total'}
           </p>
         </div>
 
@@ -55,7 +61,7 @@ export default function TrackerPanel({ config, entries, onAdd, onDelete }) {
           <EmptyState
             icon="calendar"
             title="Nothing on this date"
-            text={`There are no ${config.label.toLowerCase()} logged for ${formatDate(filterDate).toLowerCase()}.`}
+            text={`There are no ${config.label.toLowerCase()} logged for ${dateInSentence(filterDate)}.`}
           >
             <Button variant="outline-primary" size="sm" onClick={() => changeFilter('')}>
               Show all dates
