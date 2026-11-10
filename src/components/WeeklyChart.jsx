@@ -73,27 +73,31 @@ export default function WeeklyChart({ series }) {
         Bars show calories in kcal. The line under each day is workout time.
       </figcaption>
 
-      <table className="visually-hidden">
-        <caption>Calories and workout minutes for the last 7 days</caption>
-        <thead>
-          <tr>
-            <th scope="col">Day</th>
-            <th scope="col">Calories eaten</th>
-            <th scope="col">Calories burned</th>
-            <th scope="col">Workout minutes</th>
-          </tr>
-        </thead>
-        <tbody>
-          {series.map((day) => (
-            <tr key={day.date}>
-              <th scope="row">{formatDate(day.date)}</th>
-              <td>{day.caloriesEaten}</td>
-              <td>{day.caloriesBurned}</td>
-              <td>{day.workoutMinutes}</td>
+      {/* A wrapper is hidden instead of the table itself: tables ignore the
+          1px size that .visually-hidden sets and would widen the page. */}
+      <div className="visually-hidden">
+        <table>
+          <caption>Calories and workout minutes for the last 7 days</caption>
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Calories eaten</th>
+              <th scope="col">Calories burned</th>
+              <th scope="col">Workout minutes</th>
             </tr>
+          </thead>
+          <tbody>
+            {series.map((day) => (
+              <tr key={day.date}>
+                <th scope="row">{formatDate(day.date)}</th>
+                <td>{day.caloriesEaten}</td>
+                <td>{day.caloriesBurned}</td>
+                <td>{day.workoutMinutes}</td>
+              </tr>
           ))}
         </tbody>
       </table>
+      </div>
     </figure>
   )
 }
