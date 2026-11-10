@@ -94,9 +94,9 @@ export default function WeeklyChart({ series }) {
                 <td>{day.caloriesBurned}</td>
                 <td>{day.workoutMinutes}</td>
               </tr>
-          ))}
-        </tbody>
-      </table>
+            ))}
+          </tbody>
+        </table>
       </div>
     </figure>
   )
