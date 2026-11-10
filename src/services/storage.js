@@ -13,6 +13,7 @@
 // (with .then / await) will not need to change when the real API arrives.
 // ============================================================================
 import { buildSeedData } from '../data/seedData'
+import { toDateKey } from '../utils/date'
 
 const PREFIX = 'healthtrack'
 const SEEDED_KEY = `${PREFIX}:seeded`
@@ -95,5 +96,5 @@ export async function resetToSampleData() {
 
 /** Save a message from the contact form (Phase 2: POST /api/messages). */
 export async function sendMessage(message) {
-  return addEntry('messages', { ...message, date: new Date().toISOString().slice(0, 10) })
+  return addEntry('messages', { ...message, date: toDateKey() })
 }
