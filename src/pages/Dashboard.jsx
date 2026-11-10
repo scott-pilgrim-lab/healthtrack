@@ -84,7 +84,7 @@ export default function Dashboard() {
     <>
       <title>Dashboard | HealthTrack</title>
       <PageHeader eyebrow={formatLongDate(today)} title="Your dashboard" lead="Today at a glance, plus everything you have logged.">
-        <Button variant="outline-light" size="sm" onClick={handleReset}>
+        <Button variant="outline-light" onClick={handleReset}>
           Reset sample data
         </Button>
       </PageHeader>

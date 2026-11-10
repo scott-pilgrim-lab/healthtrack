@@ -63,14 +63,25 @@ export default function WeeklyChart({ series }) {
           {series.map((day) => (
             <div key={day.date} className={day.date === today ? 'is-today' : ''}>
               <strong>{formatWeekday(day.date)}</strong>
-              <span>{day.workoutMinutes > 0 ? `${day.workoutMinutes} min` : 'rest'}</span>
+              {/* The " min" unit is hidden on narrow phones so the label fits
+                  on one line; the caption below explains the number. */}
+              <span>
+                {day.workoutMinutes > 0 ? (
+                  <>
+                    {day.workoutMinutes}
+                    <span className="ht-chart-unit"> min</span>
+                  </>
+                ) : (
+                  'rest'
+                )}
+              </span>
             </div>
           ))}
         </div>
       </div>
 
       <figcaption className="small text-muted mt-3">
-        Bars show calories in kcal. The line under each day is workout time.
+        Bars show calories in kcal. The number under each day is workout time in minutes.
       </figcaption>
 
       {/* A wrapper is hidden instead of the table itself: tables ignore the
