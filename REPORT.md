@@ -10,8 +10,8 @@
 | **Student** | Maroun Issa |
 | **Student ID** |52430635|
 | **Instructor** |Ihab Hassoun|
-| **GitHub repository** | _[repository URL]_ |
-| **Live site** | _[Vercel URL]_ |
+| **GitHub repository** | https://github.com/scott-pilgrim-lab/healthtrack |
+| **Live site** | https://healthtrack-henna.vercel.app/ |
 
 ---
 

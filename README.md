@@ -6,7 +6,7 @@ This repository is **Phase 1** of the CSCI426 Advanced Web Programming project: 
 
 - **Developer:** Maroun Issa
 - **Course:** CSCI426 Advanced Web Programming
-- **Live demo:** _add your Vercel URL here_
+- **Live demo:** https://healthtrack-henna.vercel.app/
 
 ## Features
 
